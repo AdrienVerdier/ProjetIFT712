@@ -37,5 +37,6 @@ pip install -r requirements.txt
     ├── models               <- Scripts used to generate models and inference results.
     └── visualization        <- Scripts to generate graphics.
         └── visualize.py
+    └── interface            <- Scripts used for user interface
 ```
     
