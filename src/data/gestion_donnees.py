@@ -1,5 +1,6 @@
 #####
-# VotreNom (VotreMatricule) .~= À MODIFIER =~.
+# Félix Gaucher (gauf2611)
+# Adrien Verdier (vera2704)
 ###
 
 import csv
@@ -23,10 +24,10 @@ class GestionDonnees:
         """
         x_train, t_train, classes = self.lire_fichier_entrainement(self.train_file)
         x_test = self.lire_fichier_test(self.test_file)
-        t_train = self.mise_en_forme_classes(classes, t_train)
+        t_train, t_categ_train = self.mise_en_forme_classes(classes, t_train)
         #self.enregistrer_donnees(x_train, t_train, x_test, classes)
 
-        return x_train, t_train, x_test, classes
+        return x_train, t_train, x_test, classes, t_categ_train
 
     def lire_fichier_entrainement(self, train_file):
         """
@@ -120,7 +121,88 @@ class GestionDonnees:
         for i in range (0,len(labels_train)):
                 labels_train_modifie.append(int(np.where(classes==labels_train[i])[0][0]))
 
-        return np.array(labels_train_modifie)
+        labels_train_preApprentissage = []
+        for label in labels_train:
+            categorie = label.split("_")
+
+            labels_train_preApprentissage.append(self.findClasses(categorie[0])-1)
+
+        return np.array(labels_train_modifie), np.array(labels_train_preApprentissage)
+
+    def findClasses(self, categorie):
+        """Cette méthode permet de renvoyer le numéro de la catégorie qui lui correspond
+
+        Args:
+            categorie (String): Catégorie de la feuille
+        """
+        if categorie == "Acer":
+            return 1
+        elif categorie == "Pterocarya":
+            return 2
+        elif categorie == "Quercus":
+            return 3
+        elif categorie == "Tilia":
+            return 4
+        elif categorie == "Magnolia":
+            return 5
+        elif categorie == "Salix":
+            return 6
+        elif categorie == "Zelkova":
+            return 7
+        elif categorie == "Betula":
+            return 8
+        elif categorie == "Fagus":
+            return 9
+        elif categorie == "Phildelphus":
+            return 10
+        elif categorie == "Populus":
+            return 11
+        elif categorie == "Alnus":
+            return 12
+        elif categorie == "Arundinaria":
+            return 13
+        elif categorie == "Cornus":
+            return 14
+        elif categorie == "Liriodendron":
+            return 15
+        elif categorie == "Cytisus":
+            return 16
+        elif categorie == "Rhododendron":
+            return 17
+        elif categorie == "Eucalyptus":
+            return 18
+        elif categorie == "Cercis":
+            return 19
+        elif categorie == "Cotinus":
+            return 20
+        elif categorie == "Celtis":
+            return 21
+        elif categorie == "Callicarpa":
+            return 22
+        elif categorie == "Prunus":
+            return 23
+        elif categorie == "Ilex":
+            return 24
+        elif categorie == "Ginkgo":
+            return 25
+        elif categorie == "Liquidambar":
+            return 26
+        elif categorie == "Lithocarpus":
+            return 27
+        elif categorie == "Viburnum":
+            return 28
+        elif categorie == "Crataegus":
+            return 29
+        elif categorie == "Morus":
+            return 30
+        elif categorie == "Olea":
+            return 31
+        elif categorie == "Castanea":
+            return 32
+        elif categorie == "Ulmus":
+            return 33
+        elif categorie == "Sorbus":
+            return 34
 
     def enregistrer_donnees(self, data_train, labels_train, data_test, classes):
         """
