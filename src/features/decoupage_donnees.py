@@ -1,5 +1,6 @@
 #####
-# VotreNom (VotreMatricule) .~= À MODIFIER =~.
+# Félix Gaucher (gauf2611)
+# Adrien Verdier (vera2704)
 ###
 
 import numpy as np
