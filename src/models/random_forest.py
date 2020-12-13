@@ -87,13 +87,3 @@ class RandomForest:
         self.min_samples_leaf = self.rfc.best_estimator_.get_params()["min_samples_leaf"]
         self.max_features = self.rfc.best_estimator_.get_params()["max_features"]
         self.max_leaf_nodes = self.rfc.best_estimator_.get_params()["max_leaf_nodes"]
-
-    def sauvegarde_modele() :
-        """
-        Je ne sais pas trop comment la faire pour cette méthode là car
-        il faudrait pouvoir enregistrer notre modèle comme on le veut
-        afin de pouvoir le réutiliser juste pour une prédiction
-        """
-
-        # Voila comment on accède aux données si besoin 
-        print('n_estimators : ' + str(self.n_estimators) + ' - max_depth : ' + str(self.max_depth) + ' - min_samples_leaf : ' + str(self.min_samples_leaf) + ' - max_features : ' + str(self.max_features) + ' - max_leaf_nodes : ' + str(self.max_leaf_nodes))

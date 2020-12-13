@@ -34,9 +34,6 @@ class DecoupeDonnees:
             t_categ_train [np.array] : La liste des catégories de nos données d'entrainement
         """
         [x_train, y_train, x_test, y_test, t_categ_train] = self.decouper_donnees()
-        #self.enregistrer_donnees(x_train, y_train, x_test, y_test)
-
-        #Ensuite on ajoutera nos méthodes qui vont venir modifier nos données, enfin dans cette méthode là, ça pourra être avant
 
         return x_train, y_train, x_test, y_test, t_categ_train
 
@@ -125,16 +122,3 @@ class DecoupeDonnees:
         x_test_normalized = preprocessing.normalize(x_test, 'l2')
 
         return x_train_normalized, x_test_normalized
-
-    def enregistrer_donnees(self, x_train, y_train, x_test, y_test):
-        """
-        Cette méthode va venir enregistrer toutes nos données dans un fichier sur le git
-
-        Args:
-            x_train (numpy array): Liste de toutes nos données d'entrainement
-            y_train (numpy array): Liste de toutes nos classes qui correspondent aux différentes données d'entrainement
-            x_test (numpy array): Liste de toutes les données de tests
-            y_test (numpy array): Liste de toutes nos classes qui correspondent aux différentes données d'entrainement
-        """
-
-        # Coder cette méthode pour enregistrer les données dans un fichier

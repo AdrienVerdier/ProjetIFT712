@@ -81,16 +81,3 @@ class PerceptronModele:
         self.alpha = self.pct.best_estimator_.get_params()["alpha"]
         self.max_iter = self.pct.best_estimator_.get_params()["max_iter"]
         self.n_iter_no_change = self.pct.best_estimator_.get_params()["n_iter_no_change"]
-
-    def sauvegarde_modele() :
-    	"""
-    	Je ne sais pas trop comment la faire pour cette méthode là car
-    	il faudrait pouvoir enregistrer notre modèle comme on le veut
-    	afin de pouvoir le réutiliser juste pour une prédiction
-    	"""
-
-        # Pour accéder aux paramètres on fait comme ça 
-        if self.penalty != None:
-            print('penalty : ' + self.penalty + ' - alpha : ' + str(self.alpha) + ' - max_iter : ' + str(self.max_iter) + ' - n_iter_no_change : ' + str(self.n_iter_no_change))
-        else :
-            print('penalty : ' + 'None' + ' - alpha : ' + str(self.alpha) + ' - max_iter : ' + str(self.max_iter) + ' - n_iter_no_change : ' + str(self.n_iter_no_change))

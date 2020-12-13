@@ -78,13 +78,3 @@ class PlusProcheVoisin:
         self.algorithm = self.ppv.best_estimator_.get_params()["algorithm"]
         self.weights = self.ppv.best_estimator_.get_params()["weights"]
         self.n_neighbors = self.ppv.best_estimator_.get_params()["n_neighbors"]
-
-    def sauvegarde_modele() :
-        """
-        Je ne sais pas trop comment la faire pour cette méthode là car
-        il faudrait pouvoir enregistrer notre modèle comme on le veut
-        afin de pouvoir le réutiliser juste pour une prédiction
-        """
-
-        # On les récupère comme ça si jamais on veut les enregistrer :
-        print('algorithm : ' + self.algorithm + ' - weights : ' + self.weights + ' - n_neighbors : ' + str(self.n_neighbors))

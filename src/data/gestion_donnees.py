@@ -203,16 +203,3 @@ class GestionDonnees:
             return 33
         elif categorie == "Sorbus":
             return 34
-
-    def enregistrer_donnees(self, data_train, labels_train, data_test, classes):
-        """
-        Cette méthode va venir enregistrer toutes nos données dans un fichier sur le git
-
-        Args:
-            data_train (numpy array): Liste de toutes nos données d'entrainement
-            labels_train (numpy array): Liste de toutes nos classes qui correspondent aux différentes données d'entrainement
-            data_test (numpy array): Liste de toutes les données de tests
-            classes (numpy array): Liste de tous nos noms de classes
-        """
-
-        # Coder cette méthode pour enregistrer les données dans un fichier

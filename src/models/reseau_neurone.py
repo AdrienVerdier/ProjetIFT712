@@ -145,25 +145,3 @@ class ReseauNeurone:
         self.beta_2 = self.rn.best_estimator_.get_params()["beta_2"]
         self.n_iter_no_change = self.rn.best_estimator_.get_params()["n_iter_no_change"]
         self.max_fun = self.rn.best_estimator_.get_params()["max_fun"]
-
-    def sauvegarde_modele() :
-    	"""
-    	Je ne sais pas trop comment la faire pour cette méthode là car
-    	il faudrait pouvoir enregistrer notre modèle comme on le veut
-    	afin de pouvoir le réutiliser juste pour une prédiction
-    	"""
-
-        # Pour accéder aux données ont fait comme suit : 
-        print('hidden_layer_sizes : ' + str(self.hidden_layer_sizes) + 
-              ' - activation : ' + self.activation + 
-              ' - solver : ' + self.solver + 
-              ' - alpha : ' + str(self.alpha) + 
-              ' - learning_rate : ' + self.learning_rate + 
-              ' - learning_rate_init : ' + str(self.learning_rate_init) + 
-              ' - power_t : ' + str(self.power_t) + 
-              ' - max_iter : ' + str(self.max_iter) + 
-              ' - momentum : ' + str(self.momentum) + 
-              ' - beta_1 : ' + str(self.beta_1) + 
-              ' - beta_2 : ' + str(self.beta_2) + 
-              ' - n_iter_no_change : ' + str(self.n_iter_no_change) + 
-              ' - max_fun : ' + str(self.max_fun))

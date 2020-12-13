@@ -77,13 +77,3 @@ class AnalyseDiscriminanteLineaire:
         self.lda.fit(x_tab, y_tab)
 
         self.solver = self.lda.best_estimator_.get_params()["solver"]
-
-    def sauvegarde_modele() :
-        """
-        Je ne sais pas trop comment la faire pour cette méthode là car
-        il faudrait pouvoir enregistrer notre modèle comme on le veut
-        afin de pouvoir le réutiliser juste pour une prédiction
-        """
-
-        # Voila comment on accède aux données si on veut les enregistrer
-        print("solver : " + self.solver)

@@ -77,13 +77,3 @@ class Noyau:
         self.kernel = self.svc.best_estimator_.get_params()["kernel"]
         self.C = self.svc.best_estimator_.get_params()["C"]
         self.probability = self.svc.best_estimator_.get_params()["probability"]
-
-    def sauvegarde_modele() :
-        """
-        Je ne sais pas trop comment la faire pour cette méthode là car
-        il faudrait pouvoir enregistrer notre modèle comme on le veut
-        afin de pouvoir le réutiliser juste pour une prédiction
-        """
-
-        # On accède comme ça aux données si jamais on a besoin
-        print('kernel : ' + self.kernel + ' - C : ' + str(self.C) + ' - probability : ' + str(self.probability))
