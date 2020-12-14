@@ -63,6 +63,14 @@ class DecoupeDonnees:
         """
         Cette mÃ©thode va transformer les donnÃ©es grÃ¢ce Ã  une mÃ©thode de prÃ©-traitement de scikit learn
         pour fournir des donnÃ©es dite scalÃ©
+        
+        Args:
+            x_train (np.array): données d'entrainement devant être transformées
+            x_test (np.array): données de test devant être transformées
+            
+        Returns:
+            x_train_scaled (np.array): données d'entrainement transformées
+            x_test_scaled (np.array): données de test transformées
         """
         x_train_scaled = preprocessing.scale(x_train)
         x_test_scaled = preprocessing.scale(x_test)
@@ -73,6 +81,14 @@ class DecoupeDonnees:
         """
         Cette mÃ©thode va venir modifier nos donnÃ©es brute grÃ¢ce Ã  la mÃ©thode
         Min Max de prÃ©processing de scikit learn
+        
+        Args:
+            x_train (np.array): données d'entrainement devant être transformées
+            x_test (np.array): données de test devant être transformées
+            
+        Returns:
+            x_train_minmax (np.array): données d'entrainement transformées
+            x_test_minmax (np.array): données de test transformées
         """
         min_max_scaler = preprocessing.MinMaxScaler()
         x_train_minmax = min_max_scaler.fit_transform(x_train)
@@ -84,6 +100,14 @@ class DecoupeDonnees:
         """
         Cette mÃ©thode va venir modifier nos donnÃ©es brute grÃ¢ce Ã  la mÃ©thode 
         Max abs de prÃ©processing de scikit learn
+        
+        Args:
+            x_train (np.array): données d'entrainement devant être transformées
+            x_test (np.array): données de test devant être transformées
+            
+        Returns:
+            x_train_maxabs (np.array): données d'entrainement transformées
+            x_test_maxabs (np.array): données de test transformées
         """
         max_abs_scaler = preprocessing.MaxAbsScaler()
         x_train_maxabs = max_abs_scaler.fit_transform(x_train)
@@ -95,6 +119,14 @@ class DecoupeDonnees:
         """
         Cette mÃ©thode va venir modifier nos donnÃ©es brute grÃ¢ce Ã  la mÃ©thode 
         quantile de prÃ©processing de scikit learn
+        
+        Args:
+            x_train (np.array): données d'entrainement devant être transformées
+            x_test (np.array): données de test devant être transformées
+            
+        Returns:
+            x_train_trans (np.array): données d'entrainement transformées
+            x_test_trans (np.array): données de test transformées
         """
         quantile_transformer = preprocessing.QuantileTransformer(random_state=17)
         x_train_trans = quantile_transformer.fit_transform(x_train)
@@ -106,6 +138,14 @@ class DecoupeDonnees:
         """
         Cette mÃ©thode va venir modifier nos donnÃ©es brute grÃ¢ce Ã  la mÃ©thode 
         Gaussian de prÃ©processing de scikit learn
+        
+        Args:
+            x_train (np.array): données d'entrainement devant être transformées
+            x_test (np.array): données de test devant être transformées
+            
+        Returns:
+            x_train_gauss (np.array): données d'entrainement transformées
+            x_test_gauss (np.array): données de test transformées
         """
         quantile_transformer2 = preprocessing.QuantileTransformer(output_distribution='normal', random_state=17)
         x_train_gauss = quantile_transformer2.fit_transform(x_train)
@@ -117,6 +157,14 @@ class DecoupeDonnees:
         """
         Cette mÃ©thode va venir modifier nos donnÃ©es brute grÃ¢ce Ã  la mÃ©thode 
         normalize de prÃ©processing de scikit learn
+        
+        Args:
+            x_train (np.array): données d'entrainement devant être transformées
+            x_test (np.array): données de test devant être transformées
+            
+        Returns:
+            x_train_normalized (np.array): données d'entrainement transformées
+            x_test_normalized (np.array): données de test transformées
         """
         x_train_normalized = preprocessing.normalize(x_train, 'l2')
         x_test_normalized = preprocessing.normalize(x_test, 'l2')

@@ -31,6 +31,10 @@ class PerceptronModele:
 
     def entrainement(self, x_train, y_train):
         """
+        Args:
+            x_train : données d'entrainement
+            y_train : cibles associées aux données d'entrainement
+        
         Entraîne une méthode d'apprentissage du type Perceptron
         (Perceptron). La variable x_train contient
         les entrées (une matrice numpy avec tous nos éléments d'entrainement)

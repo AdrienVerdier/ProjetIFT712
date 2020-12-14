@@ -21,6 +21,13 @@ class GestionDonnees:
 
         train_file : nom du fichier d'entrainement
         test_file : nom du fichier de test
+        
+        Returns:
+            x_train [np.array]: matrice contenant les données d'entraînement
+            t_train [np.array]: matrice contenant les résultats attendus de nos données d'entraînement
+            x_test [np.array]: matrice contenant nos donnÃ©es de test
+            classes [np.array]: nom de nos classes possibles
+            t_categ_train [np.array]: indices de nos classes possibles
         """
         x_train, t_train, classes = self.lire_fichier_entrainement(self.train_file)
         x_test = self.lire_fichier_test(self.test_file)
@@ -110,11 +117,12 @@ class GestionDonnees:
         Fonction qui va affecter un chiffre Ã  une classe qui correspond Ã  son emplacement dans le tableau des classes
 
         Args:
-            classes (numpy array): Liste de tous nos noms de classes
-            labels_train (numpy array): Liste de toutes nos classes qui correspondent aux diffÃ©rentes donnÃ©es d'entrainement
+            classes (np.array): Liste de tous nos noms de classes
+            labels_train (np.array): Liste de toutes nos classes qui correspondent aux diffÃ©rentes donnÃ©es d'entrainement
 
         Returns:
-            labels_train_modifie[np.array]: Liste de l'indice de nos classes qui correspondent aux diffÃ©rentes donnÃ©es d'entrainement
+            labels_train_modifie (np.array): Liste de l'indice de nos classes qui correspondent aux diffÃ©rentes donnÃ©es d'entrainement
+            labels_train_preApprentissage (np.array): liste des noms des classes de chaque éléments avant la phase d'entrainement
         """
         labels_train_modifie = []
 
