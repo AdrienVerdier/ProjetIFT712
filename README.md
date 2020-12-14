@@ -1,6 +1,10 @@
-# ProjetIFT712
+# Projet IFT-712
 
-*FelixGaucher - AdrienVerdier, 06/10/2020*
+Réalisé par :
+
+Félix GAUCHER (CIP: gauf2611)
+Adrien Verdier (CIP: vera2704)
+
 
 Projet de session du cours IFT 712
 
