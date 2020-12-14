@@ -38,8 +38,8 @@ def build_project():
     gs = bool(int(sys.argv[3]))
 
     # Nos deux fichiers de données
-    train_file = '/data/raw/train.csv'
-    test_file = '/data/raw/test.csv'
+    train_file = './data/raw/train.csv'
+    test_file = './data/raw/test.csv'
 
     # On récupère les données d'entrainement et de test 
     recuperateur_donnees = gd.GestionDonnees(train_file, test_file)
@@ -94,7 +94,7 @@ def build_project():
         print('Plus Proches Voisin : ')
         print('Erreur train = ', err_train, '%')
         print('Erreur test = ', err_test, '%')
-        print('algorithm : ' + ppv.algorithm + ' - weights : ' + ppv.weights + ' - n_neighbors : ' + str(ppv.n_neighbors))
+        print('algorithm : ' + ppv.algorithm + ' - weights : ' + ppv.weights + ' - n_neighbors : ' + str(ppv.nb_voisin))
 
     elif modele == "ADL" :
         lda = ADL.AnalyseDiscriminanteLineaire()
@@ -250,10 +250,10 @@ def build_project():
                 ' - max_fun : ' + str(rn.max_fun))
 
     elif modele == "DoubleSearch" : 
-        2_step_pred = TSP.BossFinal()
-        2_step_pred.entrainementModele(x_train, y_train, y_categ_train)
+        two_step_pred = TSP.TwoStepPrediction()
+        two_step_pred.entrainementModele(x_train, y_train, y_categ_train)
 
-        pred_train = 2_step_pred.predict(x_train)
+        pred_train = two_step_pred.predict(x_train)
         err_train = []
         for i in range (0,6):
             tmp = []
@@ -266,7 +266,7 @@ def build_project():
                 tmp.append(err)
             err_train.append(tmp)
 
-        pred_test = 2_step_pred.predict(x_test)
+        pred_test = two_step_pred.predict(x_test)
         err_test = []
         for i in range (0,6):
             tmp = []

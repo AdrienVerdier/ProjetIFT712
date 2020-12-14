@@ -59,7 +59,7 @@ class DecoupeDonnees:
 
         return x_train, y_train, x_test, y_test, t_categ_train
 
-    def get_scaled_data(self, x_train, x_text):
+    def get_scaled_data(self, x_train, x_test):
         """
         Cette méthode va transformer les données grâce à une méthode de pré-traitement de scikit learn
         pour fournir des données dite scalé

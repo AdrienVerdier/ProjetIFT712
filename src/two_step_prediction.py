@@ -7,12 +7,12 @@
 
 import numpy as np
 import sys
-import models.Plus_Proche_Voisin as PPV
-import models.Analyse_discriminante_lineaire as ADL
-import models.random_forest as RFC
-import models.noyau as SVC
-import models.perceptron as PCT
-import models.reseau_neurone as RN
+import src.models.Plus_Proche_Voisin as PPV
+import src.models.Analyse_discriminante_lineaire as ADL
+import src.models.random_forest as RFC
+import src.models.noyau as SVC
+import src.models.perceptron as PCT
+import src.models.reseau_neurone as RN
 
 class TwoStepPrediction:
 
