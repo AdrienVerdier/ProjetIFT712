@@ -1,12 +1,12 @@
 # Projet IFT-712
 
-Réalisé par :
+Realised by :
 
-Félix GAUCHER (CIP: gauf2611)
-Adrien Verdier (CIP: vera2704)
+ - Félix GAUCHER (CIP: gauf2611)
+ - Adrien Verdier (CIP: vera2704)
 
-
-Projet de session du cours IFT 712
+Here you will find the code of our project.
+In this file you can also find how to setup the development environment and how the project is structured.
 
 ## Setup
 
